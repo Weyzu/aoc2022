@@ -37,3 +37,18 @@ pub mod io_ {
 		}
 	}
 }
+
+pub mod matrix {
+	pub fn transpose<T>(matrix: &Vec<Vec<T>>) -> Vec<Vec<T>>
+	where
+		T: Copy,
+	{
+		let mut transposed = vec![Vec::with_capacity(matrix.len()); matrix[0].len()];
+		for r in matrix {
+			for i in 0..r.len() {
+				transposed[i].push(r[i]);
+			}
+		}
+		transposed
+	}
+}
