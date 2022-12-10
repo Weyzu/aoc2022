@@ -1,0 +1,8 @@
+[package]
+name = "day08"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+auxiliary = { path = "../auxiliary", version = "1.0.0" }
+take-until = "0.1.0"
