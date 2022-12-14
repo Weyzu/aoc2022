@@ -38,6 +38,22 @@ pub mod io_ {
 	}
 }
 
+pub mod vec {
+	pub trait VecPutAndGetIndex {
+		type Item;
+		fn put_and_get_index(&mut self, item: Self::Item) -> usize;
+	}
+
+	impl<T> VecPutAndGetIndex for Vec<T> {
+		type Item = T;
+		fn put_and_get_index(&mut self, item: T) -> usize {
+			let idx = self.len();
+			self.push(item);
+			idx
+		}
+	}
+}
+
 pub mod matrix {
 	pub fn transpose<T>(matrix: &Vec<Vec<T>>) -> Vec<Vec<T>>
 	where
