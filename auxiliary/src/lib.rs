@@ -38,6 +38,16 @@ pub mod io_ {
 	}
 }
 
+pub mod pair {
+	pub fn reverse<T, D>(pair: &(T, D)) -> (D, T)
+		where
+			T: Clone,
+			D: Clone,
+	{
+		(pair.1.clone(), pair.0.clone())
+	}
+}
+
 pub mod vec {
 	pub trait VecPutAndGetIndex {
 		type Item;
