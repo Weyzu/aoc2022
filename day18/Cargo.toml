@@ -1,0 +1,7 @@
+[package]
+name = "day18"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+auxiliary = { path = "../auxiliary", version = "1.0.0" }
